@@ -1,0 +1,8 @@
+body {
+    font-family: Arial;
+}
+
+.verticalLine {
+    width: 2px;
+    background-color: #aaaaaa;
+}

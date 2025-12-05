@@ -1,0 +1,32 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "name": "Зубная щетка",
+            "price": 299,
+            "image": "images/store/toothbrush.jpg",
+            "description": "Электрическая зубная щетка с несколькими режимами чистки."
+        },
+        {
+            "id": 2,
+            "name": "Зубная паста",
+            "price": 199,
+            "image": "images/store/toothpaste.jpg",
+            "description": "Отбеливающая зубная паста с фтором для защиты эмали."
+        },
+        {
+            "id": 3,
+            "name": "Ополаскиватель для рта",
+            "price": 149,
+            "image": "images/store/mouthwash.jpg",
+            "description": "Антибактериальный ополаскиватель для свежего дыхания."
+        },
+        {
+            "id": 4,
+            "name": "Зубная нить",
+            "price": 99,
+            "image": "images/store/dental_floss.jpg",
+            "description": "Натуральная зубная нить для эффективной очистки межзубных пространств."
+        }
+    ]
+}
