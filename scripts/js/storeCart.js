@@ -42,17 +42,15 @@ function makeOrder() {
     console.log('Making order with items:', itemsInCart);
 
     fetch('https://httpbin.org/post', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(itemsInCart)
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(itemsInCart)
     })
     .then(r => r.text())
     .then(text => {
         const win = window.open('', '_blank');
         win.document.write(`<pre>${text}</pre>`);
     });
-
-
 }
 
 
