@@ -14,47 +14,54 @@
     <body>
         <object id="navbar" type="text/html" data="navbar.html" style="width:100%; height: 55px;"></object>
 
-        <h2>Наши врачи</h2>
+        <div class="container my-4">
+            <h2 class="mb-4 text-center">Галлерея</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+                <div class="col">
+                    <figure class="figure">
+                        <img src="images/photo1.jpg" alt="Фото 1" class="figure-img img-fluid rounded">
+                        <figcaption class="figure-caption">Врач 1</figcaption>
+                    </figure>
+                </div>
+                <div class="col">
+                    <figure class="figure">
+                        <img src="images/photo2.jpg" alt="Фото 2" class="figure-img img-fluid rounded">
+                        <figcaption class="figure-caption">Врач 2</figcaption>
+                    </figure>
+                </div>
+            </div>
 
-        <div style="display: inline-flex;">
-            <!-- Изображение с пояснением -->
-            <figure>
-                <img src="images/photo1.jpg" alt="Фото 1" width="300">
-                <figcaption>Иванов Иван Иванович — Хиругр</figcaption>
-            </figure>
-    
-    
-            <!-- Еще одно изображение с пояснением -->
-            <figure>
-                <img src="images/photo2.jpg" alt="Фото 2" width="300">
-                <figcaption>П. Пётр Петрович — Ортодонт</figcaption>
-            </figure>
+            <h2 class="mb-4 text-center">Оборудование</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                <div class="col">
+                    <figure class="figure">
+                        <img src="images/photo3.png" alt="Фото 3" class="figure-img img-fluid rounded">
+                        <figcaption class="figure-caption text-center">Оборудование 1</figcaption>
+                    </figure>
+                </div>
+                <div class="col">
+                    <figure class="figure">
+                        <img src="images/photo4.jpg" alt="Фото 4" class="figure-img img-fluid rounded">
+                        <figcaption class="figure-caption text-center">Оборудование 2</figcaption>
+                    </figure>
+                </div>
+                <div class="col">
+                    <figure class="figure">
+                        <img src="images/photo5.jpg" alt="Фото 5" class="figure-img img-fluid rounded">
+                        <figcaption class="figure-caption text-center">Оборудование 3</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <h2 class="mb-3 text-center">Награды</h2>
+            <div class="text-center mb-3" id="awards">
+                <a href="images/awards.jpg" target="_blank" class="d-inline-block">
+                    <img src="images/awards_thumbnail.jpg" alt="Превью награды" class="img-thumbnail" style="max-width: 120px;">
+                </a>
+            </div>
+            <p class="lead text-center">Наши награды</p>
         </div>
 
-        <h2>Наше оборудование</h2>
-        <div style="display: inline-flex;">
-            <figure>
-                <img src="images/photo3.png" alt="Фото 3" height="200">
-                <figcaption>Оборудовние 1</figcaption>
-            </figure>
-            <figure>
-                <img src="images/photo4.jpg" alt="Фото 5" height="200">
-                <figcaption>Оборудование 2</figcaption>
-            </figure>
-            <figure>
-                <img src="images/photo5.jpg" alt="Фото 6" height="200">
-                <figcaption>Оборудование 3</figcaption>
-            </figure>
-        </div>
-
-        <h2>Наши награды</h2>
-        
-        <p id="awards">
-            <a href="images/awards.jpg" target="_blank">
-            <img src="images/awards_thumbnail.jpg" alt="Увеличить изображение" width="100">
-            </a>
-        </p>
-        <p>Нажмите на миниатюру выше, чтобы открыть изображение в полном размере.</p>
         <script>
             const navbar = document.getElementById('navbar');
             const current = location.pathname.split('/').pop() || 'index.html';

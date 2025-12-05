@@ -6,19 +6,27 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
     crossorigin="anonymous">
 <link rel="stylesheet" href="style.css">
+
 <nav class="navbar navbar-expand-lg bg-light mb-3">
-  <div class="container">
-    <ul class="navbar-nav flex-row gap-3">
+    <div class="container">
         <a class="navbar-brand" href="index.html">
             <img src="images/home_icon.svg" alt="logo" width="20" height="20">
         </a>
-        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html#awards">Галерея – награды</a></li>
-        <li class="nav-item"><a class="nav-link" href="appointment.html">Запись на прием</a></li>
-        <li class="nav-item"><a class="nav-link" href="store.html">Каталог товаров</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://www.hse.ru" target="_blank" rel="noreferrer">НИУ ВШЭ</a></li>
-    </ul>
-  </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav flex-wrap gap-2">
+                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html#awards">Галерея – награды</a></li>
+                <li class="nav-item"><a class="nav-link" href="appointment.html">Запись на прием</a></li>
+                <li class="nav-item"><a class="nav-link" href="store.html">Каталог товаров</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.hse.ru" target="_blank" rel="noreferrer">НИУ ВШЭ</a></li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
 <script>
@@ -27,18 +35,18 @@
         if (!/^https?:/i.test(href) && !href.startsWith('#')) a.setAttribute('target', '_top');
     });
     
-    let current = new URL(location.href).searchParams.get('current');
+    const current = new URL(location.href).searchParams.get('current');
     
-    const links = document.querySelectorAll('nav a');
-
-    links.forEach(link => {
+    document.querySelectorAll('nav a').forEach(link => {
         const href = link.getAttribute('href') || '';
         const isExternal = /^https?:/i.test(href);
-        const match =
-        !isExternal &&
-        current &&
-        (href === current || href.split('#')[0] === current);
-        link.style.color = match ? 'var(--bs-primary)' : 'var(--bs-active)';
-
+        const match = !isExternal && current && (href === current || href.split('#')[0] === current);
+        link.classList.toggle('active', match);
+        if (match) link.setAttribute('aria-current', 'page'); else link.removeAttribute('aria-current');
     });
 </script>
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>

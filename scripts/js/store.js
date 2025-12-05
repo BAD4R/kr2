@@ -1,6 +1,6 @@
-const itemsJson = await fetch("./data/shoppItems.json").json;
 
 async function insertStoreItems() {
+    const itemsJson = await fetch("./data/shoppItems.json").json;
     console.log('Script active');
     let itemCardsContainer = document.getElementById('product-list');
 
