@@ -6,3 +6,7 @@ body {
     width: 2px;
     background-color: #aaaaaa;
 }
+
+.hidden {
+    display: none !important;
+}

@@ -15,11 +15,13 @@
         <object id="navbar" type="text/html" data="navbar.html" style="width:100%; height: 55px;"></object>
         <div class="container my-4">
             <h2 class="mb-3 text-center">Каталог товаров</h2>
-            <div id="product-list" class="row row-cols-1 row-cols-md-3 g-4">
-                
+            <div id="product-list" class="row row-cols-1 row-cols-md-3 g-4"></div>
+            <div class="container my-3">
+                <input class="btn btn-primary" id="makeOrder" value="Заказать">
             </div>
         </div>
         <script src="scripts/js/store.js"></script>
+        <script src="scripts/js/storeCart.js"></script>
         <script>
                 const navbar = document.getElementById('navbar');
             const current = location.pathname.split('/').pop() || 'index.html';
