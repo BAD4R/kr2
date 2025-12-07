@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+        <title>Список услуг</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <object id="navbar" type="text/html" data="navbar.html" style="width:100%; height: 55px;"></object>
+
+        <div class="container my-4">
+            <nav class="mb-4">
+                <p class="fw-semibold mb-2">Навигация по странице</p>
+                <div class="nav nav-pills flex-column flex-md-row gap-2">
+                    <a class="nav-link" href="#lists">Список услуг</a>
+                    <a class="nav-link" href="#nested">Список услуг 2</a>
+                    <a class="nav-link" href="#bottom">Вниз</a>
+                </div>
+            </nav>
+            
+            <h2 id="lists" class="mb-3">Список услуг</h2>
+
+            <ol class="list-group list-group-numbered mb-4">
+                <li class="list-group-item">Первичная консультация без стоимости лечения</li>
+                <li class="list-group-item">Чистка и профилактика (ультразвук, AirFlow)</li>
+                <li class="list-group-item">Лечение кариеса без осложнений</li>
+            </ol>
+
+            <ul class="list-group mb-4">
+                <li class="list-group-item">Профессиональная гигиена полости рта</li>
+                <li class="list-group-item">Подбор средств индивидуальной гигиены</li>
+                <li class="list-group-item">Отбеливание (домашнее/офисное)</li>
+            </ul>
+
+            <ol class="list-group list-group-numbered mb-4">
+                <li class="list-group-item">Диагностика зубов и десен (панорамный снимок)</li>
+                <li class="list-group-item">Консультация узких специалистов</li>
+                <li class="list-group-item">Гигиена для детей</li>
+            </ol>
+
+            <ul class="list-group mb-4">
+                <li class="list-group-item">Пломбирование</li>
+                <li class="list-group-item">Удаление зубов</li>
+                <li class="list-group-item">Реставрация</li>
+            </ul>
+
+            <h2 id="nested" class="mb-3">Список услуг 2</h2>
+
+            <ol class="list-group list-group-numbered mb-4">
+                <li class="list-group-item">Ортодонтическое лечение
+                    <ul class="mt-2 mb-0">
+                        <li>Консультация ортодонта</li>
+                        <li>Установка брекет-системы / элайнеров</li>
+                        <ol class="list-group list-group-numbered mt-2">
+                            <li class="list-group-item">План лечения</li>
+                            <li class="list-group-item">Коррекция</li>
+                        </ol>
+                    </ul>
+                </li>
+                <li class="list-group-item">Имплантация зубов
+                    <ul class="mt-2 mb-0">
+                        <li>Подбор имплантов и протезов</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <ol class="list-group list-group-numbered mb-4">
+                <li class="list-group-item">Пародонтология (лечение десен)
+                    <ul class="mt-2 mb-0">
+                        <li>Гигиенические процедуры</li>
+                        <li>Снятие зубного камня</li>
+                        <ol class="list-group list-group-numbered mt-2">
+                            <li class="list-group-item">Лечение воспалений</li>
+                            <li class="list-group-item">Поддерживающая терапия</li>
+                        </ol>
+                    </ul>
+                </li>
+                <li class="list-group-item">Рентген-диагностика
+                    <ul class="mt-2 mb-0">
+                        <li>Ортопантомограмма</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <ol class="list-group list-group-numbered mb-4">
+                <li class="list-group-item">Протезирование зубов
+                    <ul class="mt-2 mb-0">
+                        <li>Коронки, вкладки, виниры</li>
+                        <li>Съемные протезы</li>
+                        <ol class="list-group list-group-numbered mt-2">
+                            <li class="list-group-item">Подбор материала</li>
+                            <li class="list-group-item">Установка</li>
+                        </ol>
+                    </ul>
+                </li>
+                <li class="list-group-item">Хирургия
+                    <ul class="mt-2 mb-0">
+                        <li>Удаление сложных зубов</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <p class="mt-4"><a id="bottom" href="#" class="link-primary">Вернуться к началу</a></p>
+        </div>
+
+        <script>
+            const navbar = document.getElementById('navbar');
+            const current = location.pathname.split('/').pop() || 'index.html';
+            const src = 'navbar.html?current=' + encodeURIComponent(current);
+            navbar.data = src;
+        </script>
+    </body>
+
+</html>

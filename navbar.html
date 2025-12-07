@@ -20,6 +20,7 @@
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav flex-wrap gap-2">
                 <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="servicesList.html">Список услуг</a></li>
                 <li class="nav-item"><a class="nav-link" href="gallery.html#awards">Галерея – награды</a></li>
                 <li class="nav-item"><a class="nav-link" href="appointment.html">Запись на прием</a></li>
                 <li class="nav-item"><a class="nav-link" href="store.html">Каталог товаров</a></li>
@@ -42,7 +43,7 @@
         const isExternal = /^https?:/i.test(href);
         const match = !isExternal && current && (href === current || href.split('#')[0] === current);
         link.classList.toggle('active', match);
-        if (match) link.setAttribute('aria-current', 'page'); else link.removeAttribute('aria-current');
+        if (match) link.classList.add('text-primary'); else link.classList.remove('text-primary');
     });
 </script>
 

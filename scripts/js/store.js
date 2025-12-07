@@ -1,6 +1,69 @@
 
+
+
+let itemsJson = null;
+
 async function insertStoreItems() {
-    const itemsJson = await fetch("./data/shoppItems.json").json;
+    try {
+        const response = await fetch("./data/storeItems.json");
+        if (!response.ok) throw new Error('Network response was not ok');
+        itemsJson = await response.json();
+    } catch (error) {
+        console.log('Используем локальные данные:', error);
+        itemsJson = {
+            "storeItems": [
+                {
+                    "id": 1,
+                    "name": "Зубная щетка",
+                    "price": 299,
+                    "image": "images/store/toothbrush.jpg",
+                    "description": "Классическая зубная щетка."
+                },
+                {
+                    "id": 2,
+                    "name": "Зубная паста",
+                    "price": 199,
+                    "image": "images/store/toothpaste.jpg",
+                    "description": "Отбеливающая зубная паста с фтором для защиты эмали."
+                },
+                {
+                    "id": 3,
+                    "name": "Ополаскиватель для рта",
+                    "price": 149,
+                    "image": "images/store/mouthwash.jpg",
+                    "description": "Антибактериальный ополаскиватель для свежего дыхания."
+                },
+                {
+                    "id": 4,
+                    "name": "Зубная нить",
+                    "price": 99,
+                    "image": "images/store/dental_floss.jpg",
+                    "description": "Натуральная зубная нить для эффективной очистки межзубных пространств."
+                },
+                {
+                    "id": 5,
+                    "name": "Держатель для зубной щётки",
+                    "price": 179,
+                    "image": "images/store/toothbrush_holder.webp",
+                    "description": "Гигиеничный настенный держатель для хранения зубной щётки."
+                },
+                {
+                    "id": 6,
+                    "name": "Паста для чувствительных зубов",
+                    "price": 249,
+                    "image": "images/store/toothpaste.jpg",
+                    "description": "Профессиональная паста, уменьшающая чувствительность эмали."
+                },
+                {
+                    "id": 7,
+                    "name": "Электрическая зубная щётка",
+                    "price": 1999,
+                    "image": "images/store/electric_toothbrush.jpg",
+                    "description": "Многофункциональная электрическая щётка с несколькими режимами чистки."
+                }
+            ]
+        };
+    }
     console.log('Script active');
     let itemCardsContainer = document.getElementById('product-list');
 

@@ -1,11 +1,11 @@
 {
-    "items": [
+    "storeItems": [
         {
             "id": 1,
             "name": "Зубная щетка",
             "price": 299,
             "image": "images/store/toothbrush.jpg",
-            "description": "Электрическая зубная щетка с несколькими режимами чистки."
+            "description": "Классическая зубная щетка."
         },
         {
             "id": 2,
@@ -27,6 +27,27 @@
             "price": 99,
             "image": "images/store/dental_floss.jpg",
             "description": "Натуральная зубная нить для эффективной очистки межзубных пространств."
+        },
+        {
+            "id": 5,
+            "name": "Держатель для зубной щётки",
+            "price": 179,
+            "image": "images/store/toothbrush_holder.webp",
+            "description": "Гигиеничный настенный держатель для хранения зубной щётки."
+        },
+        {
+            "id": 6,
+            "name": "Паста для чувствительных зубов",
+            "price": 249,
+            "image": "images/store/toothpaste.jpg",
+            "description": "Профессиональная паста, уменьшающая чувствительность эмали."
+        },
+        {
+            "id": 7,
+            "name": "Электрическая зубная щётка",
+            "price": 1999,
+            "image": "images/store/electric_toothbrush.jpg",
+            "description": "Многофункциональная электрическая щётка с несколькими режимами чистки."
         }
     ]
 }
